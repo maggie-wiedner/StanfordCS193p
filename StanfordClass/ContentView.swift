@@ -48,7 +48,7 @@ struct CardView: View {
                 VStack {
                     Text("❄️")
                     Text("Emoji")
-                        .foregroundColor(Color.pink)
+                        .foregroundColor(Color.orange)
                 }
             }
         }
