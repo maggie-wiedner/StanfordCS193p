@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        let emojiArray: [String] = ["🎄","🎅","🧤","☃️","🤶"]
         VStack {
-            CardView()
-            CardView()
-            CardView(Filled: false)
-            CardView()
+            ForEach(emojiArray.indices, id: \.self) { index in
+                CardView(content: emojiArray[index])
+            }
         }
         .padding()
         .font(.title)
@@ -26,7 +26,7 @@ struct ContentView: View {
 
 struct CardView: View {
     @State var Filled: Bool = true
-
+    let content: String
     var body: some View {
         ZStack {
             let base = RoundedRectangle(cornerRadius: 12)
@@ -34,8 +34,7 @@ struct CardView: View {
                 base.fill(.blue)
                 base.strokeBorder(lineWidth:3)
                 VStack {
-                    Text("❄️")
-                    Text("Emoji")
+                    Text(content)
                         .foregroundColor(Color.yellow)
                 }
             }
@@ -43,8 +42,7 @@ struct CardView: View {
                 base.fill(.white)
                 base.strokeBorder(lineWidth:3)
                 VStack {
-                    Text("❄️")
-                    Text("Emoji")
+                    Text(content)
                         .foregroundColor(Color.orange)
                 }
             }
