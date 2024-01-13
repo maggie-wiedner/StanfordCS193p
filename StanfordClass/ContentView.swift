@@ -10,9 +10,9 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            CardView(Filled: true)
             CardView()
             CardView()
+            CardView(Filled: false)
             CardView()
         }
         .padding()
@@ -25,15 +25,14 @@ struct ContentView: View {
 
 
 struct CardView: View {
-    var Filled: Bool = false
-    
+    @State var Filled: Bool = true
+
     var body: some View {
         ZStack {
+            let base = RoundedRectangle(cornerRadius: 12)
             if Filled {
-                RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(.white)
-                RoundedRectangle(cornerRadius: 12)
-                    .strokeBorder(lineWidth:3)
+                base.fill(.blue)
+                base.strokeBorder(lineWidth:3)
                 VStack {
                     Text("❄️")
                     Text("Emoji")
@@ -41,17 +40,18 @@ struct CardView: View {
                 }
             }
             else {
-                RoundedRectangle(cornerRadius: 12)
-                    .foregroundColor(.blue)
-                RoundedRectangle(cornerRadius: 12)
-                    .strokeBorder(lineWidth:3)
+                base.fill(.white)
+                base.strokeBorder(lineWidth:3)
                 VStack {
                     Text("❄️")
                     Text("Emoji")
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(Color.orange)
                 }
             }
         }
+        .onTapGesture(perform: {
+            Filled = !Filled
+    })
     }
 }
 
