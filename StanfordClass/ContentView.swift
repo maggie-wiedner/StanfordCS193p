@@ -20,10 +20,12 @@ struct ContentView: View {
         .padding()}
     
     
+    
     var cardDetails: some View {
         LazyVGrid (columns: [GridItem(.adaptive(minimum: 120))]) {
             ForEach(0..<listSize, id: \.self) {index in
                 CardView(content: emojiArray[index])}}}
+    
     
     
     var cardAdjusters: some View {
@@ -52,24 +54,21 @@ struct ContentView: View {
                 let base = RoundedRectangle(cornerRadius: 12)
                 if Filled {
                     base.fill(.blue)
-                        .frame(height: 50)
-                    base.strokeBorder(lineWidth:3)
+                        .frame(height: 80)
+                    base.strokeBorder(lineWidth: 3)
                     VStack {
                         Text(content)
-                            .foregroundColor(Color.yellow)
-                    }
-                }
+                            .foregroundColor(Color.yellow)}}
                 else {
                     base.fill(.white)
-                    base.strokeBorder(lineWidth:3)
+                        .frame(height: 80)
+                    base.strokeBorder(lineWidth: 3)
                     VStack {
                         Text(content)
-                            .foregroundColor(Color.orange)
-                    }
-                }
-            }
-            .onTapGesture(perform: {
-                Filled = !Filled})}}}
+                            .foregroundColor(Color.orange)}}}
+                    .onTapGesture(perform: {
+                    Filled = !Filled})}}}
+
 
 
 #Preview {

@@ -14,6 +14,7 @@
 		1931EB3A2B4CF56F00C411F7 /* StanfordClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1931EB392B4CF56F00C411F7 /* StanfordClassTests.swift */; };
 		1931EB442B4CF56F00C411F7 /* StanfordClassUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1931EB432B4CF56F00C411F7 /* StanfordClassUITests.swift */; };
 		1931EB462B4CF56F00C411F7 /* StanfordClassUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1931EB452B4CF56F00C411F7 /* StanfordClassUITestsLaunchTests.swift */; };
+		19AF7B6C2B546D5800852B3E /* SandboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF7B6B2B546D5800852B3E /* SandboxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		1931EB3F2B4CF56F00C411F7 /* StanfordClassUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StanfordClassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1931EB432B4CF56F00C411F7 /* StanfordClassUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordClassUITests.swift; sourceTree = "<group>"; };
 		1931EB452B4CF56F00C411F7 /* StanfordClassUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StanfordClassUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		19AF7B6B2B546D5800852B3E /* SandboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				1931EB282B4CF56E00C411F7 /* StanfordClassApp.swift */,
 				1931EB2A2B4CF56E00C411F7 /* ContentView.swift */,
+				19AF7B6B2B546D5800852B3E /* SandboxView.swift */,
 				1931EB2C2B4CF56F00C411F7 /* Assets.xcassets */,
 				1931EB2E2B4CF56F00C411F7 /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1931EB2B2B4CF56E00C411F7 /* ContentView.swift in Sources */,
+				19AF7B6C2B546D5800852B3E /* SandboxView.swift in Sources */,
 				1931EB292B4CF56E00C411F7 /* StanfordClassApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
