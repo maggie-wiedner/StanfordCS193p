@@ -8,20 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        let emojiArray: [String] = ["🎄","🎅","🧤","☃️","🤶"]
-        VStack {
-            ForEach(emojiArray.indices, id: \.self) { index in
-                CardView(content: emojiArray[index])
-            }
-        }
-        .padding()
-        .font(.title)
-        .imageScale(.small)
-        .foregroundColor(.blue)
-    }
-}
+    let emojiArray: [String] = ["🎄","🎅","🧤","☃️","🤶","🍪","🍷","🔥","🌟","🦌","🔔"]
     
+    @State var listSize = 4
+    
+    
+    
+    var body: some View {
+        VStack {
+            cardDetails
+            cardAdjusters}
+            .padding()}
+    
+    
+    
+    var cardDetails: some View {
+        ForEach(0..<listSize, id: \.self)
+        {index in CardView(content: emojiArray[index])}}
+
+
+        
+        
+    var cardAdjusters: some View {
+        HStack{
+            Button(
+                action: {listSize -= 1},
+                label: {Image(systemName: "arrowshape.left.circle.fill")})
+            Spacer()
+            Button(
+                action: {listSize += 1},
+                label: {Image(systemName: "arrowshape.right.circle.fill")})
+            }
+            .padding()
+            .foregroundColor(.pink)
+            .imageScale(.large)}}
+
+
 
 
 struct CardView: View {
