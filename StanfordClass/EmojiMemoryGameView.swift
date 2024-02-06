@@ -7,23 +7,21 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct EmojiMemoryGameView: View {
     let emojiArray: [String] = ["🎄","🎅","🧤","☃️","🤶","🍪","🍷","🔥","🌟","🦌","🔔"]
     @State var listSize = 4
     
     
     var body: some View {
         VStack {
-            cardDetails
-            Spacer()
-            cardAdjusters}
+            ScrollView{cardDetails}}
         .padding()}
     
     
     
     var cardDetails: some View {
         LazyVGrid (columns: [GridItem(.adaptive(minimum: 120))]) {
-            ForEach(0..<listSize, id: \.self) {index in
+            ForEach(emojiArray.indices, id: \.self) {index in
                 CardView(content: emojiArray[index])}}}
     
     
@@ -54,14 +52,14 @@ struct ContentView: View {
                 let base = RoundedRectangle(cornerRadius: 12)
                 if Filled {
                     base.fill(.blue)
-                        .frame(height: 80)
+                        .frame(height: 150)
                     base.strokeBorder(lineWidth: 3)
                     VStack {
                         Text(content)
                             .foregroundColor(Color.yellow)}}
                 else {
                     base.fill(.white)
-                        .frame(height: 80)
+                        .frame(height: 150)
                     base.strokeBorder(lineWidth: 3)
                     VStack {
                         Text(content)
@@ -72,5 +70,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    EmojiMemoryGameView()
 }
