@@ -9,17 +9,19 @@ import SwiftUI
 
 struct SandboxView: View {
     @State var buttonStatus = true
-        
     var body: some View {
+        VStack {
+            Spacer()
+            if buttonStatus == true {buttonTrue}
+                else {buttonFalse}
+            Spacer()
+            Button1
+        }
+    }
             
-    VStack {
-        Spacer()
-        if buttonStatus == true {buttonTrue}
-        else {buttonFalse}
-        Spacer()
-        Button1}}
-            
-            
+
+// Components for each view
+    
     var buttonTrue: some View {
         ZStack {
             Circle()
@@ -47,8 +49,8 @@ struct SandboxView: View {
             action: {
                 self.buttonStatus.toggle()
                 print(buttonStatus)},
-            label: {Text("Button")})}
-}
+            label: {Text("Button")})}}
+
 
 
 #Preview {
