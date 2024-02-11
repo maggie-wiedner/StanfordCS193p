@@ -18,9 +18,18 @@ struct ContentView: View {
             ScrollView {
                 cards
                 .animation(.default, value: viewModel.cards)}
-            Button("Shuffle"){
-                viewModel.shuffle()}
+            HStack {
+                Text("Score: \(viewModel.score)")
+                Spacer()
+                Button("Shuffle"){
+                    withAnimation {
+                        viewModel.shuffle()
+                    }
+                }
+            }
+            .font(.title)
             .padding()
+
         }
     }
     
@@ -29,7 +38,9 @@ struct ContentView: View {
             CardView(card)
                 .padding(4)
                 .onTapGesture {
-                    viewModel.choose(card)
+                    withAnimation (.easeInOut(duration: 3)) {
+                        viewModel.choose(card)
+                    }
                 }
             }
         .foregroundColor(viewModel.color)
