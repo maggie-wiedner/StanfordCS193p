@@ -22,7 +22,7 @@ class EmojiMemoryGame: ObservableObject {
         
     // The View will not be able to view the private variables
     // Static makes the variable act like a global variable, without creating generic global names
-        
+    
     var cards: Array<MemoryGame<String>.Card> {
         return model.cards
     }

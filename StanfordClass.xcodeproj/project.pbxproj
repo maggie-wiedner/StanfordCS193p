@@ -20,6 +20,7 @@
 		195260DB2B7448AA008262E2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195260DA2B7448AA008262E2 /* CardView.swift */; };
 		195260DD2B746020008262E2 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195260DC2B746020008262E2 /* Pie.swift */; };
 		195260DF2B74714A008262E2 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195260DE2B74714A008262E2 /* Cardify.swift */; };
+		19590EA62B7B0BF100173E99 /* FlyingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19590EA52B7B0BF100173E99 /* FlyingNumber.swift */; };
 		19AF7B6C2B546D5800852B3E /* SandboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AF7B6B2B546D5800852B3E /* SandboxView.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		195260DA2B7448AA008262E2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		195260DC2B746020008262E2 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		195260DE2B74714A008262E2 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
+		19590EA52B7B0BF100173E99 /* FlyingNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyingNumber.swift; sourceTree = "<group>"; };
 		19AF7B6B2B546D5800852B3E /* SandboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 				195260DC2B746020008262E2 /* Pie.swift */,
 				195260DE2B74714A008262E2 /* Cardify.swift */,
 				195260D82B74042D008262E2 /* AspectVGrid.swift */,
+				19590EA52B7B0BF100173E99 /* FlyingNumber.swift */,
 				191AF58E2B55C10F0000E210 /* MemoryGame.swift */,
 				191AF5902B55C5830000E210 /* EmojiMemoryGame.swift */,
 				1931EB2A2B4CF56E00C411F7 /* ContentView.swift */,
@@ -287,6 +290,7 @@
 				1931EB292B4CF56E00C411F7 /* StanfordClassApp.swift in Sources */,
 				191AF58F2B55C10F0000E210 /* MemoryGame.swift in Sources */,
 				191AF5912B55C5830000E210 /* EmojiMemoryGame.swift in Sources */,
+				19590EA62B7B0BF100173E99 /* FlyingNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
