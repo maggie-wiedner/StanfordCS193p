@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 class EmojiMemoryGame: ObservableObject {
     private static let emojiArray = ["🎄","🎅","🧤","☃️","🤶","🍪","🍷","🔥","🌟","🦌","🔔"]
     

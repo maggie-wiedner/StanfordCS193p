@@ -13,7 +13,6 @@ struct ContentView: View {
     
     private let aspectRatio : CGFloat = 2/3
 
-    
     var body: some View {
         VStack{
             ScrollView {
@@ -51,10 +50,9 @@ struct ContentView: View {
                     .onTapGesture {
                         choose(card)
                     }
-                    .transition(.offset(
-                        x: CGFloat.random(in: -1000...1000),
-                        y: CGFloat.random(in: -1000...1000)
-                    ))
+                    .matchedGeometryEffect(id: card.id, in: dealingNamespace)
+                    .transition(.asymmetric(insertion: .identity, removal: .identity))
+
                 }
             }
         .foregroundColor(viewModel.color)
@@ -72,19 +70,25 @@ struct ContentView: View {
     
     @State private var lastScoreChange = (0, causedByCardId: "")
     
+    @Namespace private var dealingNamespace
+    
     private var deck: some View {
         ZStack {
             ForEach(undealtCards) { card in
                 CardView(card)
+                    .matchedGeometryEffect(id: card.id, in: dealingNamespace)
+                    .transition(.asymmetric(insertion: .identity, removal: .identity))
             }
-            .foregroundColor(.orange)
+            .foregroundColor(viewModel.color)
         }
         .frame(width: deckWidth, height: deckWidth / aspectRatio)
         .onTapGesture {
-            withAnimation(.easeInOut(duration: 2)) {
-                for card in viewModel.cards {
-                    dealt.insert(card.id)
+            var delay: TimeInterval = 0
+            for card in viewModel.cards {
+                withAnimation(.easeInOut(duration: 0.5).delay(delay)) {
+                    _ = dealt.insert(card.id)
                 }
+                delay += 0.15
             }
         }
     }
