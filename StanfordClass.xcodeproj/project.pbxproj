@@ -111,15 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				1931EB282B4CF56E00C411F7 /* StanfordClassApp.swift */,
-				195260DA2B7448AA008262E2 /* CardView.swift */,
-				195260DC2B746020008262E2 /* Pie.swift */,
-				195260DE2B74714A008262E2 /* Cardify.swift */,
-				195260D82B74042D008262E2 /* AspectVGrid.swift */,
-				19590EA52B7B0BF100173E99 /* FlyingNumber.swift */,
-				191AF58E2B55C10F0000E210 /* MemoryGame.swift */,
-				191AF5902B55C5830000E210 /* EmojiMemoryGame.swift */,
-				1931EB2A2B4CF56E00C411F7 /* ContentView.swift */,
-				19AF7B6B2B546D5800852B3E /* SandboxView.swift */,
+				19D97A022B814E3500678C84 /* Model */,
+				19D97A012B814E2400678C84 /* View Model */,
+				19D97A002B814E1F00678C84 /* View */,
 				1931EB2C2B4CF56F00C411F7 /* Assets.xcassets */,
 				1931EB2E2B4CF56F00C411F7 /* Preview Content */,
 			);
@@ -149,6 +143,36 @@
 				1931EB452B4CF56F00C411F7 /* StanfordClassUITestsLaunchTests.swift */,
 			);
 			path = StanfordClassUITests;
+			sourceTree = "<group>";
+		};
+		19D97A002B814E1F00678C84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1931EB2A2B4CF56E00C411F7 /* ContentView.swift */,
+				195260DA2B7448AA008262E2 /* CardView.swift */,
+				195260DC2B746020008262E2 /* Pie.swift */,
+				195260DE2B74714A008262E2 /* Cardify.swift */,
+				195260D82B74042D008262E2 /* AspectVGrid.swift */,
+				19590EA52B7B0BF100173E99 /* FlyingNumber.swift */,
+				19AF7B6B2B546D5800852B3E /* SandboxView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19D97A012B814E2400678C84 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				191AF5902B55C5830000E210 /* EmojiMemoryGame.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		19D97A022B814E3500678C84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				191AF58E2B55C10F0000E210 /* MemoryGame.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
